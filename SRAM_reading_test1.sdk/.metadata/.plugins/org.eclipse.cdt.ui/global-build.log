@@ -1,0 +1,995 @@
+18:09:02 **** Build of project SRAM_reading_test1_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_8/src"
+make -C microblaze_0/libsrc/cpu_v2_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v6_8/src"
+make -C microblaze_0/libsrc/standalone_v6_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+mb-ar: creating ../../../lib/libxil.a
+"Running Make libs in microblaze_0/libsrc/cpu_v2_8/src"
+make -C microblaze_0/libsrc/cpu_v2_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/standalone_v6_8/src"
+make -C microblaze_0/libsrc/standalone_v6_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+18:09:16 **** Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../SRAM_reading_test1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../SRAM_reading_test1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: SRAM_reading_test1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SRAM_reading_test1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SRAM_reading_test1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SRAM_reading_test1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SRAM_reading_test1.elf  |tee "SRAM_reading_test1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2712	    268	   3108	   6088	   17c8	SRAM_reading_test1.elf
+'Finished building: SRAM_reading_test1.elf.size'
+' '
+18:09:19 **** Auto Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+make: Nothing to be done for 'all'.
+18:11:18 **** Auto Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../SRAM_reading_test1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: SRAM_reading_test1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SRAM_reading_test1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SRAM_reading_test1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SRAM_reading_test1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SRAM_reading_test1.elf  |tee "SRAM_reading_test1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6080	    272	   3104	   9456	   24f0	SRAM_reading_test1.elf
+'Finished building: SRAM_reading_test1.elf.size'
+' '
+18:11:24 **** Incremental Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+make: Nothing to be done for 'all'.
+18:14:48 **** Incremental Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+make: Nothing to be done for 'all'.
+18:15:46 **** Incremental Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+make: Nothing to be done for 'all'.
+18:16:19 **** Incremental Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+make: Nothing to be done for 'all'.
+18:17:09 **** Auto Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../SRAM_reading_test1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: SRAM_reading_test1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SRAM_reading_test1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SRAM_reading_test1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SRAM_reading_test1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SRAM_reading_test1.elf  |tee "SRAM_reading_test1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2732	    268	   3112	   6112	   17e0	SRAM_reading_test1.elf
+'Finished building: SRAM_reading_test1.elf.size'
+' '
+18:17:10 **** Incremental Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+make: Nothing to be done for 'all'.
+18:17:12 **** Incremental Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+make: Nothing to be done for 'all'.
+18:17:42 **** Incremental Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+make: Nothing to be done for 'all'.
+18:18:05 **** Incremental Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+make: Nothing to be done for 'all'.
+18:18:15 **** Incremental Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+make: Nothing to be done for 'all'.
+18:19:08 **** Incremental Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+make: Nothing to be done for 'all'.
+18:24:42 **** Auto Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../SRAM_reading_test1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:59:20: warning: large integer implicitly truncated to unsigned type [-Woverflow]
+     UINTPTR addr = 0x600000000;
+                    ^~~~~~~~~~~
+../src/helloworld.c:63:11: warning: passing argument 1 of 'print' makes pointer from integer without a cast [-Wint-conversion]
+     print(Xil_In64(addr));
+           ^~~~~~~~
+In file included from c:\xilinx\sdk\2018.3\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.3\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:231:9: note: expected 'const char *' but argument is of type 'u64 {aka long long unsigned int}'
+ void    _EXFUN(print, (const char* ));
+         ^
+../src/helloworld.c:68:5: error: 'x' undeclared (first use in this function)
+     x++;
+     ^
+../src/helloworld.c:68:5: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:60:9: warning: unused variable 'value' [-Wunused-variable]
+     u64 value = 0;
+         ^~~~~
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+18:24:56 **** Auto Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../SRAM_reading_test1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:59:20: warning: large integer implicitly truncated to unsigned type [-Woverflow]
+     UINTPTR addr = 0x600000000;
+                    ^~~~~~~~~~~
+../src/helloworld.c:63:11: warning: passing argument 1 of 'print' makes pointer from integer without a cast [-Wint-conversion]
+     print(Xil_In64(addr));
+           ^~~~~~~~
+In file included from c:\xilinx\sdk\2018.3\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.3\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:231:9: note: expected 'const char *' but argument is of type 'u64 {aka long long unsigned int}'
+ void    _EXFUN(print, (const char* ));
+         ^
+../src/helloworld.c:60:9: warning: unused variable 'value' [-Wunused-variable]
+     u64 value = 0;
+         ^~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: SRAM_reading_test1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SRAM_reading_test1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SRAM_reading_test1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SRAM_reading_test1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SRAM_reading_test1.elf  |tee "SRAM_reading_test1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2448	    268	   3108	   5824	   16c0	SRAM_reading_test1.elf
+'Finished building: SRAM_reading_test1.elf.size'
+' '
+18:25:22 **** Auto Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../SRAM_reading_test1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:59:20: warning: large integer implicitly truncated to unsigned type [-Woverflow]
+     UINTPTR addr = 0x600000000;
+                    ^~~~~~~~~~~
+../src/helloworld.c:63:20: error: invalid type argument of unary '*' (have 'UINTPTR {aka unsigned int}')
+     print(Xil_In64(*addr));
+                    ^~~~~
+../src/helloworld.c:60:9: warning: unused variable 'value' [-Wunused-variable]
+     u64 value = 0;
+         ^~~~~
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+18:25:39 **** Auto Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../SRAM_reading_test1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:63:11: warning: passing argument 1 of 'print' makes pointer from integer without a cast [-Wint-conversion]
+     print(Xil_In64(addr));
+           ^~~~~~~~
+In file included from c:\xilinx\sdk\2018.3\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.3\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:231:9: note: expected 'const char *' but argument is of type 'u64 {aka long long unsigned int}'
+ void    _EXFUN(print, (const char* ));
+         ^
+../src/helloworld.c:60:9: warning: unused variable 'value' [-Wunused-variable]
+     u64 value = 0;
+         ^~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: SRAM_reading_test1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SRAM_reading_test1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SRAM_reading_test1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SRAM_reading_test1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SRAM_reading_test1.elf  |tee "SRAM_reading_test1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2464	    268	   3108	   5840	   16d0	SRAM_reading_test1.elf
+'Finished building: SRAM_reading_test1.elf.size'
+' '
+18:25:58 **** Auto Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../SRAM_reading_test1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:62:11: warning: passing argument 1 of 'print' makes pointer from integer without a cast [-Wint-conversion]
+     print(Xil_In64(addr));
+           ^~~~~~~~
+In file included from c:\xilinx\sdk\2018.3\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.3\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:231:9: note: expected 'const char *' but argument is of type 'u64 {aka long long unsigned int}'
+ void    _EXFUN(print, (const char* ));
+         ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: SRAM_reading_test1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SRAM_reading_test1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SRAM_reading_test1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SRAM_reading_test1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SRAM_reading_test1.elf  |tee "SRAM_reading_test1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2448	    268	   3108	   5824	   16c0	SRAM_reading_test1.elf
+'Finished building: SRAM_reading_test1.elf.size'
+' '
+18:26:34 **** Auto Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../SRAM_reading_test1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:62:11: warning: passing argument 1 of 'print' makes pointer from integer without a cast [-Wint-conversion]
+     print(Xil_In64(addr));
+           ^~~~~~~~
+In file included from c:\xilinx\sdk\2018.3\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.3\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:231:9: note: expected 'const char *' but argument is of type 'u64 {aka long long unsigned int}'
+ void    _EXFUN(print, (const char* ));
+         ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: SRAM_reading_test1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SRAM_reading_test1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SRAM_reading_test1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SRAM_reading_test1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SRAM_reading_test1.elf  |tee "SRAM_reading_test1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2472	    268	   3108	   5848	   16d8	SRAM_reading_test1.elf
+'Finished building: SRAM_reading_test1.elf.size'
+' '
+18:26:38 **** Incremental Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+make: Nothing to be done for 'all'.
+18:27:54 **** Auto Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../SRAM_reading_test1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:62:11: warning: passing argument 1 of 'print' makes pointer from integer without a cast [-Wint-conversion]
+     print(Xil_In64(addr));
+           ^~~~~~~~
+In file included from c:\xilinx\sdk\2018.3\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.3\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:231:9: note: expected 'const char *' but argument is of type 'u64 {aka long long unsigned int}'
+ void    _EXFUN(print, (const char* ));
+         ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: SRAM_reading_test1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SRAM_reading_test1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SRAM_reading_test1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SRAM_reading_test1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SRAM_reading_test1.elf  |tee "SRAM_reading_test1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2472	    268	   3108	   5848	   16d8	SRAM_reading_test1.elf
+'Finished building: SRAM_reading_test1.elf.size'
+' '
+18:27:59 **** Incremental Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+make: Nothing to be done for 'all'.
+18:28:18 **** Incremental Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+make: Nothing to be done for 'all'.
+18:29:04 **** Auto Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../SRAM_reading_test1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:62:11: warning: passing argument 1 of 'print' makes pointer from integer without a cast [-Wint-conversion]
+     print(Xil_In64(addr));
+           ^~~~~~~~
+In file included from c:\xilinx\sdk\2018.3\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.3\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:231:9: note: expected 'const char *' but argument is of type 'u64 {aka long long unsigned int}'
+ void    _EXFUN(print, (const char* ));
+         ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: SRAM_reading_test1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SRAM_reading_test1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SRAM_reading_test1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SRAM_reading_test1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SRAM_reading_test1.elf  |tee "SRAM_reading_test1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2928	    268	   3108	   6304	   18a0	SRAM_reading_test1.elf
+'Finished building: SRAM_reading_test1.elf.size'
+' '
+18:29:12 **** Incremental Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+make: Nothing to be done for 'all'.
+18:30:07 **** Auto Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../SRAM_reading_test1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:62:11: warning: passing argument 1 of 'print' makes pointer from integer without a cast [-Wint-conversion]
+     print(Xil_In64(addr));
+           ^~~~~~~~
+In file included from c:\xilinx\sdk\2018.3\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.3\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:231:9: note: expected 'const char *' but argument is of type 'u64 {aka long long unsigned int}'
+ void    _EXFUN(print, (const char* ));
+         ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: SRAM_reading_test1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SRAM_reading_test1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SRAM_reading_test1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SRAM_reading_test1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SRAM_reading_test1.elf  |tee "SRAM_reading_test1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2920	    268	   3108	   6296	   1898	SRAM_reading_test1.elf
+'Finished building: SRAM_reading_test1.elf.size'
+' '
+18:30:21 **** Incremental Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+make: Nothing to be done for 'all'.
+18:30:24 **** Incremental Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+make: Nothing to be done for 'all'.
+18:32:14 **** Incremental Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+make: Nothing to be done for 'all'.
+18:32:48 **** Auto Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../SRAM_reading_test1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:62:11: warning: passing argument 1 of 'print' makes pointer from integer without a cast [-Wint-conversion]
+     print(Xil_In64(addr));
+           ^~~~~~~~
+In file included from c:\xilinx\sdk\2018.3\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.3\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:231:9: note: expected 'const char *' but argument is of type 'u64 {aka long long unsigned int}'
+ void    _EXFUN(print, (const char* ));
+         ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: SRAM_reading_test1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SRAM_reading_test1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SRAM_reading_test1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SRAM_reading_test1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SRAM_reading_test1.elf  |tee "SRAM_reading_test1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2932	    268	   3112	   6312	   18a8	SRAM_reading_test1.elf
+'Finished building: SRAM_reading_test1.elf.size'
+' '
+18:32:52 **** Incremental Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+make: Nothing to be done for 'all'.
+18:36:24 **** Incremental Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+make: Nothing to be done for 'all'.
+18:38:11 **** Auto Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../SRAM_reading_test1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:63:5: warning: implicit declaration of function 'Xil_Out'; did you mean 'Xil_Out8'? [-Wimplicit-function-declaration]
+     Xil_Out(addr, value);
+     ^~~~~~~
+     Xil_Out8
+../src/helloworld.c:64:11: warning: passing argument 1 of 'print' makes pointer from integer without a cast [-Wint-conversion]
+     print(Xil_In64(addr));
+           ^~~~~~~~
+In file included from c:\xilinx\sdk\2018.3\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.3\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:231:9: note: expected 'const char *' but argument is of type 'u64 {aka long long unsigned int}'
+ void    _EXFUN(print, (const char* ));
+         ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: SRAM_reading_test1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SRAM_reading_test1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SRAM_reading_test1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/helloworld.o: In function `main':
+C:\FPGA_Projects\SRAM_reading_test1\SRAM_reading_test1.sdk\SRAM_reading_test1\Debug/../src/helloworld.c:63: undefined reference to `Xil_Out'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: SRAM_reading_test1.elf] Error 1
+18:38:26 **** Auto Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../SRAM_reading_test1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:64:11: warning: passing argument 1 of 'print' makes pointer from integer without a cast [-Wint-conversion]
+     print(Xil_In64(addr));
+           ^~~~~~~~
+In file included from c:\xilinx\sdk\2018.3\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.3\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:231:9: note: expected 'const char *' but argument is of type 'u64 {aka long long unsigned int}'
+ void    _EXFUN(print, (const char* ));
+         ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: SRAM_reading_test1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SRAM_reading_test1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SRAM_reading_test1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SRAM_reading_test1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SRAM_reading_test1.elf  |tee "SRAM_reading_test1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3076	    268	   3112	   6456	   1938	SRAM_reading_test1.elf
+'Finished building: SRAM_reading_test1.elf.size'
+' '
+18:38:31 **** Incremental Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+make: Nothing to be done for 'all'.
+18:39:21 **** Incremental Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+make: Nothing to be done for 'all'.
+18:40:01 **** Incremental Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+make: Nothing to be done for 'all'.
+18:41:49 **** Incremental Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../SRAM_reading_test1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:64:11: warning: passing argument 1 of 'print' makes pointer from integer without a cast [-Wint-conversion]
+     print(Xil_In64(addr));
+           ^~~~~~~~
+In file included from c:\xilinx\sdk\2018.3\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.3\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:231:9: note: expected 'const char *' but argument is of type 'u64 {aka long long unsigned int}'
+ void    _EXFUN(print, (const char* ));
+         ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: SRAM_reading_test1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SRAM_reading_test1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SRAM_reading_test1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SRAM_reading_test1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SRAM_reading_test1.elf  |tee "SRAM_reading_test1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3076	    268	   3112	   6456	   1938	SRAM_reading_test1.elf
+'Finished building: SRAM_reading_test1.elf.size'
+' '
+18:42:45 **** Incremental Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../SRAM_reading_test1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:64:11: warning: passing argument 1 of 'print' makes pointer from integer without a cast [-Wint-conversion]
+     print(Xil_In8(addr));
+           ^~~~~~~
+In file included from c:\xilinx\sdk\2018.3\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.3\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:231:9: note: expected 'const char *' but argument is of type 'u8 {aka unsigned char}'
+ void    _EXFUN(print, (const char* ));
+         ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: SRAM_reading_test1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SRAM_reading_test1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SRAM_reading_test1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SRAM_reading_test1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SRAM_reading_test1.elf  |tee "SRAM_reading_test1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3048	    268	   3108	   6424	   1918	SRAM_reading_test1.elf
+'Finished building: SRAM_reading_test1.elf.size'
+' '
+18:42:55 **** Incremental Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../SRAM_reading_test1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:64:11: warning: passing argument 1 of 'print' makes pointer from integer without a cast [-Wint-conversion]
+     print(Xil_In8(addr));
+           ^~~~~~~
+In file included from c:\xilinx\sdk\2018.3\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.3\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:231:9: note: expected 'const char *' but argument is of type 'u8 {aka unsigned char}'
+ void    _EXFUN(print, (const char* ));
+         ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: SRAM_reading_test1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SRAM_reading_test1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SRAM_reading_test1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SRAM_reading_test1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SRAM_reading_test1.elf  |tee "SRAM_reading_test1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3024	    268	   3108	   6400	   1900	SRAM_reading_test1.elf
+'Finished building: SRAM_reading_test1.elf.size'
+' '
+18:43:02 **** Incremental Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+make: Nothing to be done for 'all'.
+18:43:08 **** Incremental Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+make: Nothing to be done for 'all'.
+18:44:54 **** Auto Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../SRAM_reading_test1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:64:11: warning: passing argument 1 of 'print' makes pointer from integer without a cast [-Wint-conversion]
+     print(Xil_In64(addr));
+           ^~~~~~~~
+In file included from c:\xilinx\sdk\2018.3\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.3\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:231:9: note: expected 'const char *' but argument is of type 'u64 {aka long long unsigned int}'
+ void    _EXFUN(print, (const char* ));
+         ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: SRAM_reading_test1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SRAM_reading_test1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SRAM_reading_test1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SRAM_reading_test1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SRAM_reading_test1.elf  |tee "SRAM_reading_test1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3076	    268	   3112	   6456	   1938	SRAM_reading_test1.elf
+'Finished building: SRAM_reading_test1.elf.size'
+' '
+18:44:56 **** Incremental Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+make: Nothing to be done for 'all'.
+18:45:17 **** Incremental Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+make: Nothing to be done for 'all'.
+18:47:13 **** Auto Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../SRAM_reading_test1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:60:17: error: expected expression before ';' token
+     u64 value = ;
+                 ^
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+18:47:21 **** Auto Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../SRAM_reading_test1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: SRAM_reading_test1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SRAM_reading_test1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SRAM_reading_test1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SRAM_reading_test1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SRAM_reading_test1.elf  |tee "SRAM_reading_test1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6436	    272	   3108	   9816	   2658	SRAM_reading_test1.elf
+'Finished building: SRAM_reading_test1.elf.size'
+' '
+18:47:26 **** Incremental Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+make: Nothing to be done for 'all'.
+18:48:08 **** Incremental Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../SRAM_reading_test1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: SRAM_reading_test1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SRAM_reading_test1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SRAM_reading_test1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SRAM_reading_test1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SRAM_reading_test1.elf  |tee "SRAM_reading_test1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6436	    272	   3108	   9816	   2658	SRAM_reading_test1.elf
+'Finished building: SRAM_reading_test1.elf.size'
+' '
+18:48:37 **** Incremental Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+make: Nothing to be done for 'all'.
+18:49:02 **** Incremental Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../SRAM_reading_test1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: SRAM_reading_test1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SRAM_reading_test1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SRAM_reading_test1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SRAM_reading_test1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SRAM_reading_test1.elf  |tee "SRAM_reading_test1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6436	    272	   3108	   9816	   2658	SRAM_reading_test1.elf
+'Finished building: SRAM_reading_test1.elf.size'
+' '
+18:50:42 **** Incremental Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../SRAM_reading_test1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: SRAM_reading_test1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SRAM_reading_test1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SRAM_reading_test1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SRAM_reading_test1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SRAM_reading_test1.elf  |tee "SRAM_reading_test1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6424	    272	   3104	   9800	   2648	SRAM_reading_test1.elf
+'Finished building: SRAM_reading_test1.elf.size'
+' '
+18:51:13 **** Incremental Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+make: Nothing to be done for 'all'.
+18:51:31 **** Incremental Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+make: Nothing to be done for 'all'.
+18:52:02 **** Incremental Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../SRAM_reading_test1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: SRAM_reading_test1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SRAM_reading_test1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SRAM_reading_test1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SRAM_reading_test1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SRAM_reading_test1.elf  |tee "SRAM_reading_test1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6436	    272	   3108	   9816	   2658	SRAM_reading_test1.elf
+'Finished building: SRAM_reading_test1.elf.size'
+' '
+18:52:31 **** Incremental Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+make: Nothing to be done for 'all'.
+18:53:52 **** Incremental Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+make: Nothing to be done for 'all'.
+19:33:36 **** Incremental Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../SRAM_reading_test1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: SRAM_reading_test1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SRAM_reading_test1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SRAM_reading_test1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SRAM_reading_test1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SRAM_reading_test1.elf  |tee "SRAM_reading_test1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6436	    272	   3108	   9816	   2658	SRAM_reading_test1.elf
+'Finished building: SRAM_reading_test1.elf.size'
+' '
+19:33:54 **** Incremental Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+make: Nothing to be done for 'all'.
+19:35:39 **** Auto Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../SRAM_reading_test1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: SRAM_reading_test1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SRAM_reading_test1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SRAM_reading_test1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SRAM_reading_test1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SRAM_reading_test1.elf  |tee "SRAM_reading_test1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6436	    272	   3108	   9816	   2658	SRAM_reading_test1.elf
+'Finished building: SRAM_reading_test1.elf.size'
+' '
+19:35:40 **** Incremental Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+make: Nothing to be done for 'all'.
+19:36:10 **** Incremental Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../SRAM_reading_test1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: SRAM_reading_test1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SRAM_reading_test1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SRAM_reading_test1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SRAM_reading_test1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SRAM_reading_test1.elf  |tee "SRAM_reading_test1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6440	    272	   3104	   9816	   2658	SRAM_reading_test1.elf
+'Finished building: SRAM_reading_test1.elf.size'
+' '
+19:38:14 **** Incremental Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../SRAM_reading_test1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: SRAM_reading_test1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SRAM_reading_test1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SRAM_reading_test1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SRAM_reading_test1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SRAM_reading_test1.elf  |tee "SRAM_reading_test1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6440	    272	   3104	   9816	   2658	SRAM_reading_test1.elf
+'Finished building: SRAM_reading_test1.elf.size'
+' '
+19:39:01 **** Incremental Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../SRAM_reading_test1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: SRAM_reading_test1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SRAM_reading_test1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SRAM_reading_test1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SRAM_reading_test1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SRAM_reading_test1.elf  |tee "SRAM_reading_test1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6440	    272	   3104	   9816	   2658	SRAM_reading_test1.elf
+'Finished building: SRAM_reading_test1.elf.size'
+' '
+19:39:38 **** Incremental Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../SRAM_reading_test1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:65:12: warning: passing argument 1 of 'printf' makes pointer from integer without a cast [-Wint-conversion]
+     printf(Xil_In64(addr));
+            ^~~~~~~~
+In file included from c:\xilinx\sdk\2018.3\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.3\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:181:5: note: expected 'const char * restrict' but argument is of type 'u64 {aka long long unsigned int}'
+ int _EXFUN(printf, (const char *__restrict, ...)
+     ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: SRAM_reading_test1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SRAM_reading_test1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SRAM_reading_test1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2018.3/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.3.1/../../../../microblaze-xilinx-elf/bin/ld.exe: SRAM_reading_test1.elf section `.text' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+c:/xilinx/sdk/2018.3/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.3.1/../../../../microblaze-xilinx-elf/bin/ld.exe: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 67336 bytes
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: SRAM_reading_test1.elf] Error 1
+19:40:03 **** Incremental Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../SRAM_reading_test1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:65:11: warning: passing argument 1 of 'print' makes pointer from integer without a cast [-Wint-conversion]
+     print(Xil_In64(addr));
+           ^~~~~~~~
+In file included from c:\xilinx\sdk\2018.3\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.3\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:231:9: note: expected 'const char *' but argument is of type 'u64 {aka long long unsigned int}'
+ void    _EXFUN(print, (const char* ));
+         ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: SRAM_reading_test1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SRAM_reading_test1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SRAM_reading_test1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SRAM_reading_test1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SRAM_reading_test1.elf  |tee "SRAM_reading_test1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6488	    272	   3104	   9864	   2688	SRAM_reading_test1.elf
+'Finished building: SRAM_reading_test1.elf.size'
+' '
+19:40:39 **** Incremental Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../SRAM_reading_test1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: SRAM_reading_test1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SRAM_reading_test1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SRAM_reading_test1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SRAM_reading_test1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SRAM_reading_test1.elf  |tee "SRAM_reading_test1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6440	    272	   3104	   9816	   2658	SRAM_reading_test1.elf
+'Finished building: SRAM_reading_test1.elf.size'
+' '
+19:41:02 **** Incremental Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../SRAM_reading_test1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: SRAM_reading_test1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SRAM_reading_test1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SRAM_reading_test1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SRAM_reading_test1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SRAM_reading_test1.elf  |tee "SRAM_reading_test1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6436	    272	   3108	   9816	   2658	SRAM_reading_test1.elf
+'Finished building: SRAM_reading_test1.elf.size'
+' '
+19:45:09 **** Incremental Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+make: Nothing to be done for 'all'.
+19:47:43 **** Incremental Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+make: Nothing to be done for 'all'.
+19:50:17 **** Incremental Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../SRAM_reading_test1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: SRAM_reading_test1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SRAM_reading_test1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SRAM_reading_test1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SRAM_reading_test1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SRAM_reading_test1.elf  |tee "SRAM_reading_test1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6428	    272	   3108	   9808	   2650	SRAM_reading_test1.elf
+'Finished building: SRAM_reading_test1.elf.size'
+' '
+19:51:07 **** Incremental Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+make: Nothing to be done for 'all'.
+19:51:13 **** Incremental Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+make: Nothing to be done for 'all'.
+19:51:59 **** Incremental Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+make: Nothing to be done for 'all'.
+19:52:07 **** Incremental Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+make: Nothing to be done for 'all'.
+20:02:40 **** Clean-only build of project SRAM_reading_test1_bsp ****
+make -k clean 
+make -C microblaze_0/libsrc/bram_v4_2/src -s clean 
+make -C microblaze_0/libsrc/cpu_v2_8/src -s clean 
+make -C microblaze_0/libsrc/standalone_v6_8/src -s clean 
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s clean 
+rm -f microblaze_0/lib/libxil.a
+20:02:41 **** Clean-only build of configuration Debug for project SRAM_reading_test1 ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  SRAM_reading_test1.elf.size  SRAM_reading_test1.elf
+' '
+20:02:42 **** Build of project SRAM_reading_test1_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_8/src"
+make -C microblaze_0/libsrc/cpu_v2_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v6_8/src"
+make -C microblaze_0/libsrc/standalone_v6_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+mb-ar: creating ../../../lib/libxil.a
+"Running Make libs in microblaze_0/libsrc/cpu_v2_8/src"
+make -C microblaze_0/libsrc/cpu_v2_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/standalone_v6_8/src"
+make -C microblaze_0/libsrc/standalone_v6_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+20:02:52 **** Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../SRAM_reading_test1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../SRAM_reading_test1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: SRAM_reading_test1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SRAM_reading_test1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SRAM_reading_test1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SRAM_reading_test1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SRAM_reading_test1.elf  |tee "SRAM_reading_test1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6428	    272	   3108	   9808	   2650	SRAM_reading_test1.elf
+'Finished building: SRAM_reading_test1.elf.size'
+' '
+20:04:11 **** Incremental Build of configuration Debug for project SRAM_reading_test1 ****
+make all 
+make: Nothing to be done for 'all'.
