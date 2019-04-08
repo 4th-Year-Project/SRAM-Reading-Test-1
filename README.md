@@ -13,6 +13,12 @@
 -  Designed for CMOD A7-35T
 -  Vivado and SDK project
 
+## How to use
+ - Program FPGA and soft processor using Xilinx SDK
+ - Run the program using the Xlinx SDK debugging functions
+ - Open device serial port at 115200
+ - The data is then read to serial
+
 ## Todo
  - [ ] Upper limit of the RAM address is still untested
  - [ ] More
